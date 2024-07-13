@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DrivenEats</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+</html>
+
+<body>
+  <div class="container">
+    <div class="topo">
+      <h1 class="titulo-branco righteous">DrivenEats</h1>
+      <p class="subtitulo-branco roboto">Sua comida em 6 minutos</p>
+    </div>
+
+    <div class="pedidos">
+      <div class="pratos">
+        <p class="titulo-preto righteous">Primeiro, seu prato</p>
+        <div class="opcoes-pratos">
+          <div
+            class="prato pf-frango"
+            onclick="selecionarPrato1()"
+          >
+            <img class="icones" src="imagens/pf_frango.jpg" />
+            <p class="subtitulo-preto roboto">PF Frango</p>
+            <p class="legenda">
+              Franguinho responsa, farofa top, saladex, arroz e feijão delícia
+            </p>
+            <div class="preco">
+              <p class="subtitulo-preto roboto preco-frango">R$14,90</p>
+              <ion-icon
+                name="checkmark-circle"
+                class="checkmark escondido check1"
+              ></ion-icon>
+              <p class="item itemfrango">1</p>
+            </div>
+          </div>
+
+          <div
+            class="prato pf-carne"
+            onclick="selecionarPrato2()"
+          >
+            <img class="icones" src="imagens/pf_carne.jpg" />
+            <p class="subtitulo-preto roboto">PF Carne</p>
+            <p class="legenda">
+              Carninha monstra, batatinha, 1 zóião, salada, arrozin e feijão
+            </p>
+            <div class="preco">
+              <p class="subtitulo-preto roboto preco-carne">R$15,90</p>
+              <ion-icon
+                name="checkmark-circle"
+                class="checkmark escondido check2"
+              ></ion-icon>
+              <p class="item itemcarne">2</p>
+            </div>
+          </div>
+
+          <div
+            class="prato opcao-tres pf-calabresa"
+            onclick="selecionarPrato3()"
+          >
+            <img class="icones" src="imagens/pf_calabresa.png" />
+            <p class="subtitulo-preto roboto">PF Calabresa</p>
+            <p class="legenda">
+              Calabresa caprichada na cebola, fritas no esquema, arroz e feijão
+            </p>
+            <div class="preco">
+              <p class="subtitulo-preto roboto preco-calabresa">R$13,90</p>
+              <ion-icon
+                name="checkmark-circle"
+                class="checkmark escondido check3">
+                <p class="item itemcalabresa">3</p>
+              </ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bebidas">
+        <p class="titulo-preto righteous">Agora, sua bebida</p>
+        <div class="opcoes-pratos">
+          <div
+            class="prato coca"
+            onclick="selecionarBebida1()"
+          >
+            <img class="icones" src="imagens/coca.png" />
+            <p class="subtitulo-preto roboto">Coquinha Gelada</p>
+            <p class="legenda">Lata 269ml</p>
+            <div class="preco">
+              <p class="subtitulo-preto roboto preco-coca">R$3,90</p>
+              <ion-icon
+                name="checkmark-circle"
+                class="checkmark escondido check4"
+              ></ion-icon>
+              <p class="item itemcoca">1</p>
+            </div>
+          </div>
+
+          <div
+            class="prato suco"
+            onclick="selecionarBebida2()"
+          >
+            <img class="icones" src="imagens/suco.png" />
+            <p class="subtitulo-preto roboto">Suquinho de Laranja</p>
+            <p class="legenda">Copo 400ml</p>
+            <div class="preco">
+              <p class="subtitulo-preto roboto preco-suco">R$5,90</p>
+              <ion-icon
+                name="checkmark-circle"
+                class="checkmark escondido check5"
+              ></ion-icon>
+              <p class="item itemsuco">2</p>
+            </div>
+          </div>
+
+          <div
+            class="prato opcao-tres fanta"
+            onclick="selecionarBebida3()"
+          
+          >
+            <img class="icones" src="imagens/fanta.png" />
+            <p class="subtitulo-preto roboto">Fanta Laranja</p>
+            <p class="legenda">Lata 350ml</p>
+            <div class="preco">
+              <p class="subtitulo-preto roboto preco-fanta">R$4,90</p>
+              <ion-icon
+                name="checkmark-circle"
+                class="checkmark escondido check6"
+              ></ion-icon>
+              <p class="item itemfanta">3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobremesas">
+        <p class="titulo-preto righteous">Por fim, sua sobremesa</p>
+        <div class="opcoes-pratos">
+          <div
+            class="prato pudim"
+            onclick="selecionarSobremesa1()"
+            
+          >
+            <img class="icones" src="imagens/pudim.jpg" />
+            <p class="subtitulo-preto roboto">Pudim de Vó</p>
+            <p class="legenda">De leite condensado</p>
+            <div class="preco">
+              <p class="subtitulo-preto roboto preco-pudim">R$7,90</p>
+              <ion-icon
+                name="checkmark-circle"
+                class="checkmark escondido check7"
+              ></ion-icon>
+              <p class="item itempudim">1</p>
+            </div>
+          </div>
+
+          <div
+            class="prato brownie"
+            onclick="selecionarSobremesa2()"
+         
+          >
+            <img class="icones" src="imagens/brownie.jpg" />
+            <p class="subtitulo-preto roboto">Brownie Bolado</p>
+            <p class="legenda">Acompanha sorvete</p>
+            <div class="preco">
+              <p class="subtitulo-preto roboto preco-brownie">R$9,90</p>
+              <ion-icon
+                name="checkmark-circle"
+                class="checkmark escondido check8"
+              ></ion-icon>
+              <p class="item itembrownie">2</p>
+            </div>
+          </div>
+
+          <div
+            class="prato opcao-tres mousse"
+            onclick="selecionarSobremesa3()"  
+          >
+            <img class="icones" src="imagens/mouse.jpg" />
+            <p class="subtitulo-preto roboto">Mousse Top</p>
+            <p class="legenda">Mousse de maracujá</p>
+            <div class="preco">
+              <p class="subtitulo-preto roboto preco-mousse">R$8,90</p>
+              <ion-icon
+                name="checkmark-circle"
+                class="checkmark escondido check9"
+              ></ion-icon>
+              <p class="item itemmousse">3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="confirmar-pedido roboto escondido">
+        <div class="confirme-pedido"><p>Confirme seu pedido</p></div>
+        <div class="confirmar-prato">
+          <p class="prato-escolhido">Escolha um prato</p>
+          <p class="preco-prato-escolhido">R$</p>
+        </div>
+        <div class="confirmar-bebida">
+          <p class="bebida-escolhida">Escolha uma bebida</p>
+          <p class="preco-bebida-escolhida">R$</p>
+        </div>
+        <div class="confirmar-sobremesa">
+          <p class="sobremesa-escolhida">Sobremesa Escolhida</p>
+          <p class="preco-sobremesa-escolhida">R$</p>
+        </div>
+        <div class="total">
+          <p>TOTAL</p>
+          <p class="preco-total">R$27,70</p>
+        </div>
+
+        <div class="botao-pode-pedir">
+          <a href="https://wa.me/5511958250606/?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20o%20pedido%3A%0A-%20Prato%0A-%20Bebida%0A-%20Sobremesa%0ATotal%3A%20R%24%2027%2C70
+
+          ">Tudo certo, pode pedir!</a>
+                  </div>
+
+        <div class="botao-cancelar" onclick="cancelarPedido()">
+          <p>Cancelar</p>
+        </div>
+     </div>
+
+
+      <div class="menu-inferior">
+        <div class="botao-pedido">
+          <p class="texto-botao">Selecione os 3 itens para fechar o pedido</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  
+  <script
+    nomodule=""
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+  ></script>
+</body>
