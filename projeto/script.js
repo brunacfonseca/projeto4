@@ -491,5 +491,3 @@ function cancelarPedido() {
   const opaco5 = document.querySelector(".menu-inferior");
   opaco5.classList.remove("opaco");
 }
-
-function pedidoZap() {}
