@@ -281,15 +281,21 @@ function calcularPreco() {
   let precoNumB = 0;
   let precoNumS = 0;
 
+  let pratoZap = "";
+  let bebidaZap = "";
+  let sobremesaZap = "";
+
   if (valorItemPrato == 1) {
     const precoPrato = document.querySelector(".preco-frango");
     const precoTexto = precoPrato.textContent;
     const precoFormatado = precoTexto.replace(/[^\d.,]/g, "").replace(",", ".");
 
-    precoNumP = Number(precoFormatado).toFixed(2);
+    precoNumP = Number(precoFormatado).toFixed(2).replace(".", ",");
 
     const valorPrato = document.querySelector(".preco-prato-escolhido");
     valorPrato.innerHTML = "R$" + precoNumP;
+
+    pratoZap = "PF de Frango";
   }
 
   if (valorItemPrato == 2) {
@@ -297,10 +303,12 @@ function calcularPreco() {
     const precoTexto = precoPrato.textContent;
     const precoFormatado = precoTexto.replace(/[^\d.,]/g, "").replace(",", ".");
 
-    precoNumP = Number(precoFormatado).toFixed(2);
+    precoNumP = Number(precoFormatado).toFixed(2).replace(".", ",");
 
     const valorPrato = document.querySelector(".preco-prato-escolhido");
     valorPrato.innerHTML = "R$" + precoNumP;
+
+    pratoZap = "PF de Carne";
   }
 
   if (valorItemPrato == 3) {
@@ -308,10 +316,12 @@ function calcularPreco() {
     const precoTexto = precoPrato.textContent;
     const precoFormatado = precoTexto.replace(/[^\d.,]/g, "").replace(",", ".");
 
-    precoNumP = Number(precoFormatado).toFixed(2);
+    precoNumP = Number(precoFormatado).toFixed(2).replace(".", ",");
 
     const valorPrato = document.querySelector(".preco-prato-escolhido");
     valorPrato.innerHTML = "R$" + precoNumP;
+
+    pratoZap = "PF de Calabresa";
   }
 
   const itemBebida = document.querySelector(".item-selecionado-bebida");
@@ -323,10 +333,12 @@ function calcularPreco() {
     const precoTexto = precoBebida.textContent;
     const precoFormatado = precoTexto.replace(/[^\d.,]/g, "").replace(",", ".");
 
-    precoNumB = Number(precoFormatado).toFixed(2);
+    precoNumB = Number(precoFormatado).toFixed(2).replace(".", ",");
 
     const valorPrato = document.querySelector(".preco-bebida-escolhida");
     valorPrato.innerHTML = "R$" + precoNumB;
+
+    bebidaZap = "Coquinha Gelada";
   }
 
   if (valorItemBebida == 2) {
@@ -334,10 +346,12 @@ function calcularPreco() {
     const precoTexto = precoBebida.textContent;
     const precoFormatado = precoTexto.replace(/[^\d.,]/g, "").replace(",", ".");
 
-    precoNumB = Number(precoFormatado).toFixed(2);
+    precoNumB = Number(precoFormatado).toFixed(2).replace(".", ",");
 
     const valorPrato = document.querySelector(".preco-bebida-escolhida");
     valorPrato.innerHTML = "R$" + precoNumB;
+
+    bebidaZap = "Suquinho de Laranja";
   }
 
   if (valorItemBebida == 3) {
@@ -345,10 +359,12 @@ function calcularPreco() {
     const precoTexto = precoBebida.textContent;
     const precoFormatado = precoTexto.replace(/[^\d.,]/g, "").replace(",", ".");
 
-    precoNumB = Number(precoFormatado).toFixed(2);
+    precoNumB = Number(precoFormatado).toFixed(2).replace(".", ",");
 
     const valorPrato = document.querySelector(".preco-bebida-escolhida");
     valorPrato.innerHTML = "R$" + precoNumB;
+
+    bebidaZap = "Fanta Laranja";
   }
 
   const itemSobremesa = document.querySelector(".item-selecionado-sobremesa");
@@ -360,10 +376,12 @@ function calcularPreco() {
     const precoTexto = precoSobremesa.textContent;
     const precoFormatado = precoTexto.replace(/[^\d.,]/g, "").replace(",", ".");
 
-    precoNumS = Number(precoFormatado).toFixed(2);
+    precoNumS = Number(precoFormatado).toFixed(2).replace(".", ",");
 
     const valorPrato = document.querySelector(".preco-sobremesa-escolhida");
     valorPrato.innerHTML = "R$" + precoNumS;
+
+    sobremesaZap = "Pudim de Vó";
   }
 
   if (valorItemSobremesa == 2) {
@@ -371,10 +389,12 @@ function calcularPreco() {
     const precoTexto = precoSobremesa.textContent;
     const precoFormatado = precoTexto.replace(/[^\d.,]/g, "").replace(",", ".");
 
-    precoNumS = Number(precoFormatado).toFixed(2);
+    precoNumS = Number(precoFormatado).toFixed(2).replace(".", ",");
 
     const valorPrato = document.querySelector(".preco-sobremesa-escolhida");
     valorPrato.innerHTML = "R$" + precoNumS;
+
+    sobremesaZap = "Brownie Bolado";
   }
 
   if (valorItemSobremesa == 3) {
@@ -382,16 +402,39 @@ function calcularPreco() {
     const precoTexto = precoSobremesa.textContent;
     const precoFormatado = precoTexto.replace(/[^\d.,]/g, "").replace(",", ".");
 
-    precoNumS = Number(precoFormatado).toFixed(2);
+    precoNumS = Number(precoFormatado).toFixed(2).replace(".", ",");
 
     const valorPrato = document.querySelector(".preco-sobremesa-escolhida");
     valorPrato.innerHTML = "R$" + precoNumS;
+
+    sobremesaZap = "Mousse Top";
   }
 
-  const valorTotal = Number(precoNumP) + Number(precoNumB) + Number(precoNumS);
+  const precoNumPFormatado = precoNumS.replace(",", ".");
+  const precoNumBFormatado = precoNumS.replace(",", ".");
+  const precoNumSFormatado = precoNumS.replace(",", ".");
+
+  const valorTotal =
+    Number(precoNumPFormatado) +
+    Number(precoNumBFormatado) +
+    Number(precoNumSFormatado);
 
   const total = document.querySelector(".preco-total");
-  total.innerHTML = "R$" + valorTotal.toFixed(2);
+  total.innerHTML = "R$" + valorTotal.toFixed(2).replace(".", ",");
+
+  const cliqueBotao = document.querySelector(".botao-pode-pedir");
+  const mensagem = `Olá, gostaria de fazer o pedido:\n- ${pratoZap}\n- ${bebidaZap}\n- ${sobremesaZap}\nTotal: R$ ${valorTotal
+    .toFixed(2)
+    .replace(".", ",")};`;
+
+  const mensagemEncoded = encodeURIComponent(mensagem);
+  const whatsappBaseUrl = "https://wa.me/5511958250606/?text=";
+
+  const whatsappUrl = whatsappBaseUrl + mensagemEncoded;
+
+  cliqueBotao.addEventListener("click", function () {
+    window.location.href = whatsappUrl;
+  });
 }
 
 function botaoLigado() {
@@ -448,3 +491,5 @@ function cancelarPedido() {
   const opaco5 = document.querySelector(".menu-inferior");
   opaco5.classList.remove("opaco");
 }
+
+function pedidoZap() {}
